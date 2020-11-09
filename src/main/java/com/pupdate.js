@@ -175,14 +175,14 @@ function setCalendar(year, month) {
 }
 function updateContent() {
 	generateContent();
-	if (ppcIE) {
+	if (ppcIE) 
+			write("</{
 		document.all['monthDays'].innerHTML = ppcCD;
 	} else if (ppcNN) {
 		with (document.layers['PopUpCalendar'].document.layers['monthDays'].document) {
 			open("text/html");
 			write("<html>\n<head>\n<title>DynDoc</title>\n</head>\n<body bgcolor=\"#FFFFFF\">\n");
-			write(ppcCD);
-			write("</body>\n</html>");
+			write(ppcCD);body>\n</html>");
 			close();
 		}
 	} else {
